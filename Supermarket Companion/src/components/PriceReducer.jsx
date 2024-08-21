@@ -26,6 +26,8 @@ function PriceReducer() {
       <div className="button-group">
         <button onClick={() => reducePrice(0.05)}>Reduce by 5%</button>
         <button onClick={() => reducePrice(0.1)}>Reduce by 10%</button>
+        <button onClick={() => reducePrice(0.15)}>Reduce by 15%</button>
+        <button onClick={() => reducePrice(0.2)}>Reduce by 20%</button>
       </div>
       <div className="price-output">
         Reduced Price: <span className="price-value">${reducedPrice.toFixed(2)}</span>

@@ -4,6 +4,7 @@ import "../App.css";
 function MarkupCalculator() {
   const [basePrice, setBasePrice] = useState("");
   const [markedUpPrice, setMarkedUpPrice] = useState(0);
+  const [profitPerUnit, setProfitPerUnit] = useState(0);
 
   const handleBasePriceChange = (e) => {
     setBasePrice(e.target.value);
@@ -12,7 +13,11 @@ function MarkupCalculator() {
   const applyMarkup = (multiplier) => {
     const price = parseFloat(basePrice);
     if (!isNaN(price)) {
-      setMarkedUpPrice(price * multiplier);
+      const markedPrice = price * multiplier;
+      setMarkedUpPrice(markedPrice);
+
+      const profit = markedPrice - price;
+      setProfitPerUnit(profit);
     }
   };
 
@@ -30,6 +35,10 @@ function MarkupCalculator() {
       </div>
       <div className="price-output">
         Marked Up Price: <span className="price-value">${markedUpPrice.toFixed(2)}</span>
+      </div>
+      <div className="profit-output">
+        <div className="profit-label">Profit Per Unit:</div>
+        <div className="profit-value">${profitPerUnit.toFixed(2)}</div>
       </div>
     </div>
   );
