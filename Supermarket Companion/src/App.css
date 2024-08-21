@@ -1,0 +1,123 @@
+/* Title Styling */
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 3rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #E30613; /* Match the red color */
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+/* Wrapper for both containers */
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* Space between the two containers */
+  flex-wrap: wrap; /* Allows wrapping into a column on small screens */
+}
+
+/* Container styling shared by both MarkupCalculator and PriceReducer */
+.container {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Slightly deeper shadow */
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 10px 0;  /* Vertical margin to provide spacing in vertical layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content */
+  border: 1px solid #333; /* Optional border */
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  background: linear-gradient(145deg, #007bff, #0056b3); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add more depth on hover */
+}
+
+/* Pricing Output Styling */
+.price-output {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #e0e0e0; /* Default color for text */
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.price-output .price-value {
+  color: #4CAF50; /* Green color for dollar amount */
+}
+
+/* Input and Label Styling */
+label {
+  font-size: 1rem;
+  color: #bbb;
+  text-align: center;
+  width: 100%;
+}
+
+input[type="number"] {
+  width: 100%; 
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  box-sizing: border-box;
+  text-align: center; /* Center text inside the input */
+}
+
+/* Background */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #121212, #1a1a1a); /* Subtle background gradient */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .container-wrapper {
+    flex-direction: column; /* Stacks containers vertically on small screens */
+  }
+}
