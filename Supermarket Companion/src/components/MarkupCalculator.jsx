@@ -29,7 +29,7 @@ function MarkupCalculator() {
       <h2>Markup Calculator</h2>
       <label>
         Enter Market Price:
-        <input type="number" value={basePrice} onChange={handleBasePriceChange} placeholder="Enter base price" />
+        <input type="number" inputMode="decimal" value={basePrice} onChange={handleBasePriceChange} placeholder="Enter base price" />
       </label>
       <div className="button-group">
         <button onClick={() => applyMarkup(1.5)}>1.5x Markup</button>

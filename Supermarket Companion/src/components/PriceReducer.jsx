@@ -21,7 +21,7 @@ function PriceReducer() {
       <h2>Price Reduction</h2>
       <label>
         Enter Price to Reduce:
-        <input type="number" value={reductionPrice} onChange={handleReductionPriceChange} placeholder="Enter price" />
+        <input type="number" inputMode="decimal" value={reductionPrice} onChange={handleReductionPriceChange} placeholder="Enter price" />
       </label>
       <div className="button-group">
         <button onClick={() => reducePrice(0.05)}>Reduce by 5%</button>
