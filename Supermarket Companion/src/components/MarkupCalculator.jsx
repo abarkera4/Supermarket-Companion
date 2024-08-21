@@ -14,9 +14,12 @@ function MarkupCalculator() {
     const price = parseFloat(basePrice);
     if (!isNaN(price)) {
       const markedPrice = price * multiplier;
-      setMarkedUpPrice(markedPrice);
 
-      const profit = markedPrice - price;
+      const finalMarkedPrice = Math.floor(markedPrice * 100) / 100;
+
+      setMarkedUpPrice(finalMarkedPrice);
+
+      const profit = finalMarkedPrice - price;
       setProfitPerUnit(profit);
     }
   };
