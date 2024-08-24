@@ -3,7 +3,7 @@ import "../App.css";
 
 function MarkupCalculator() {
   const [basePrice, setBasePrice] = useState("");
-  const [markupMultiplier, setMarkupMultiplier] = useState(1.5);
+  const [markupMultiplier, setMarkupMultiplier] = useState(1.275);
   const [markedUpPrice, setMarkedUpPrice] = useState(0);
   const [profitPerUnit, setProfitPerUnit] = useState(0);
 
@@ -41,6 +41,9 @@ function MarkupCalculator() {
         <input type="number" inputmode="decimal" value={basePrice} onChange={handleBasePriceChange} placeholder="Enter base price" />
       </label>
       <div className="button-group">
+        <button className={markupMultiplier === 1.275 ? "active" : ""} onClick={() => handleMarkupSelection(1.275)}>
+          1.275x Markup
+        </button>
         <button className={markupMultiplier === 1.5 ? "active" : ""} onClick={() => handleMarkupSelection(1.5)}>
           1.5x Markup
         </button>
